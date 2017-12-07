@@ -7,3 +7,4 @@ script:
 - python testlatlong.py
 after_failure:
 - git revert HEAD~1
+- git push
