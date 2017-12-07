@@ -8,7 +8,7 @@ class TestLatLong(unittest.TestCase):
     def test_set_long(self):
         a = latlong.LatLong()
         a.set_long("10E")
-        self.assertEqual(a.get_long(), "10")
+        self.assertEqual(a.get_long(), "10E")
         self.assertRaises(latlong.NumberOutOfRangeError, a.set_long, "1000E") 
         self.assertRaises(latlong.NumberOutOfRangeError, a.set_long, "-1E")
         self.assertRaises(latlong.DirectionScrewyError, a.set_long, "10R")
